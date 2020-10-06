@@ -40,6 +40,7 @@ function init(table) {
                 }
 
                 parentField.innerHTML = `
+                <p>${i + 1}</p>
                 <div id="field"></div>
                 <div id="create-list">
                     <input type="text" id="input">

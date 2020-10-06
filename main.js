@@ -48,7 +48,6 @@ function init(table) {
                     <button id="close-btn">Закрыть</button>
                 </div>
                 `
-                console.log(data)
 
                 let field = parentField.querySelector('#field')
                 if (activities[workingCols[i].innerHTML].length != 0) {
@@ -56,8 +55,6 @@ function init(table) {
                         createElement(field, data[i], i)
                     }
                 }
-
-                console.log(activities)
                 let input = parentField.querySelector('#input')
                 let btn = parentField.querySelector('#btn')
                 let closeBtn = parentField.querySelector('#close-btn')
@@ -69,10 +66,14 @@ function init(table) {
                 }
                 btn.addEventListener('click', function () {
                     let p = document.createElement('p')
-                    p.innerHTML = data.length + 1 + '. ' + input.value
-                    data.push(input.value)
-                    input.value = ''
-                    field.appendChild(p)
+                    if(input.value != '') {
+                        p.innerHTML = data.length + 1 + '. ' + input.value
+                        data.push(input.value)
+                        input.value = ''
+                        field.appendChild(p)
+                    } else {
+                        alert('You should enter something to add!')
+                    }
                     console.log(activities[workingCols[i].innerHTML])
                 })
                 closeBtn.addEventListener('click', function () {

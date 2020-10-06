@@ -6,12 +6,36 @@
 table {
     border: 1px solid black;
     border-collapse: collapse;
-    position: absolute;
-    top: 100px;
-    left: 100px;
 }
 td {
     border: 1px solid black;
     text-align: center;
     padding: 10px;
+}
+
+.active:hover {
+    background-color: cornflowerblue;
+    cursor: pointer;
+    color: white;
+}
+#container {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /* align-items: baseline; */
+}
+.parent {
+    padding-left: 20px;
+}
+#field {
+    min-height: 50vh;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+    margin-bottom: 20px;
+    color: black;
+    padding: 10px;
+}
+.show {
+    display: block;
 }
